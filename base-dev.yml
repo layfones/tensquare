@@ -8,9 +8,14 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/tensquare_base?characterEncoding=utf-8
     password: toor
     username: root
-  jpa:
-    database: mysql
-    show-sql: true
+  #jpa:
+    #database: mysql
+    #show-sql: true
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
 eureka:
   client:
     service-url:
